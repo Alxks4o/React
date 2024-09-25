@@ -1,0 +1,75 @@
+body{
+    background-image: url("../images/OIP.jpg");
+    text-align: center;
+
+}
+
+h1{
+    margin: 20px;
+    border: 20px;
+    padding: 40px;
+    content: 90px;
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 300%;
+}
+
+h2{
+    margin: 20px;
+    border: 20px;
+    padding: 40px;
+    content: 90px;
+    color: blue;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 200%;
+}
+
+p{
+    color: chocolate;
+    background-color: rgb(29, 17, 17);
+    border: 3px solid;
+    border-color: chocolate;
+    padding: 20px;
+}
+
+button{
+    background-color: gray;
+    color: rgb(0, 0, 0);
+    padding: 1%;
+}
+
+button:hover{
+    background-color: linen;
+    color: black;
+}
+
+a:link, a:visited{
+    background-color: gray;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+a:hover{
+    background-color: linen;
+    color: black;
+}
+
+a#textlink:link, a#textlink:visited{
+    background-color: gray;
+    color: black;
+    padding: 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid black;
+}
+
+a#textlink:hover{
+    background-color: linen;
+    color: black;
+}
+
