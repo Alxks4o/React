@@ -11,6 +11,7 @@ import Register from './routes/register';
 import Login from './routes/login';
 import HomeNav from './components/home_navbar';
 import Basket from './components/basket';
+import Order from './routes/order';
 
 
 const router = createBrowserRouter([
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <HomeNav/>
+  },
+  {
+    path: '/order/:orderid',
+    element: <Order/>
   }
 ])
 

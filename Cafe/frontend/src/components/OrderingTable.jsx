@@ -13,6 +13,9 @@ import Basket from './basket';
 export default function OrderingTable(){
     const [drinks, setDrinks] = useState([])
     const [food, setFood] = useState([])
+    const [update, setUpdate] = useState(1);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [basket, setBasket] = useState([])
 
     useEffect(() => {
         axios
@@ -40,6 +43,14 @@ export default function OrderingTable(){
             item:item,user:userid
         }).then((res)=>{
             console.log(res.data)
+        }).then(() =>{
+            axios
+            .get("http://localhost:3000/basket/?user="+userid)
+            .then((res) =>{
+                setBasket(res.data)
+                setIsLoaded(true);
+            })
+            .catch((err) => console.log(err))
         })
     }
 

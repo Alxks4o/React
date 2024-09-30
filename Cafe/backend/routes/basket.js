@@ -129,33 +129,33 @@ router.delete('/item',async function(req, res, next) {
     {
         if(item.item == req.query.item)
         {
-            item.quantity-1;
             if(item.quantity>1)
-            else{
+            {
                 newItems.push({
                     item:item.item,
                     quantity:item.quantity-1
                 })
             }
+        }else{
+            newItems.push({
+                item:item.item,
+                quantity:item.quantity
+            })
         }
     }
-
-    newItems.push({
-        item:item.item,
-        quantity:item.quantity
-    })
-
+ 
     await collection.updateOne({
         user:req.query.user
     },
     {
-        "&set":(
+        "$set":{
             items:newItems
-        )
+        }
+    })
+ 
+    res.json({"Success":1})
     })
 
-    console.log(newItems) 
-    res.json({"Success":1})  
-})
+    
 
 module.exports = router;

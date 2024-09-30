@@ -7,9 +7,12 @@ import {
 import axios from 'axios';
 import React, {useState, useEffect} from 'react';
 import Cookies from 'js-cookie';
+import { useNavigate } from 'react-router-dom';
+
 
 export default function Basket(){
-    const [basket, setBasket] = useState([])
+    const navigate = useNavigate();
+    const [basket, setBasket] = useState([]);
     const [isLoaded, setIsLoaded] = useState(false);
 
     useEffect(()=> {
@@ -24,16 +27,37 @@ export default function Basket(){
         .catch((err) => console.log(err))
     },[]);
 
-    const removeButton = (event) => {
+
+    const RemoveFromBasket = (event) => {
         var userid = Cookies.get("user");
         var item = event.currentTarget.id
-        console.log
+        console.log(userid+'|'+item)
         axios
-        .delete("http://localhost:3000/basket/item?item"+item+"&user"+userid,{
-
+        .delete("http://localhost:3000/basket/item?item="+item+"&user="+userid, {
+            item:item,user:userid
+        }).then((res) => {
+            console.log(res.data)
         })
-      };
+    };
+
+    const CreateOrder = (event) => {
+        var userid = Cookies.get("user");
+        var site = Cookies.get("site");
+        axios
+        .post("http://localhost:3000/orders",{
+            site:site,user:userid
+        }).then((res) =>{
+            if(res.data.order!=undefined)
+            {
+                navigate("/order/"+res.data.order);            
+            }else{
+                console.log("Could not create order")
+            }
+                
+        })
+    }
     
+
     if(isLoaded)
     {
         return (
@@ -59,7 +83,7 @@ export default function Basket(){
                                             <td>{item.quantity}</td>
                                             <td>£{item.price}</td>
                                             <td>£{item.quantity * item.price}</td>                                            
-                                            <td><Button onClick={removeButton} id={item.id} variant='danger' style={{backgroundColor:'red', borderColor: 'red'}}>Remove</Button></td>
+                                            <td><Button onClick={RemoveFromBasket} id={item.id} variant='danger' style={{backgroundColor:'red', borderColor: 'red'}}>Remove</Button></td>
                                         </tr>
                                     ))
                                 }
@@ -67,7 +91,7 @@ export default function Basket(){
                         </Table>
                         <Card.Text>
                             Total Price: £{basket.total}
-                            <Button className='float-end' variant='success'>Check out</Button>
+                            <Button onClick={CreateOrder} className='float-end' variant='success'>Check out</Button>
                         </Card.Text>
                     </Card.Body>
                 </Card>

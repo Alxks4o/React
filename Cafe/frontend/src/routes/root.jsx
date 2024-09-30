@@ -29,7 +29,7 @@ export default function Root(){
     if(isLoaded)
     {    
         return (
-            <Container style={{textAlign: 'center', padding:"10px", marginTop:12, marginLeft:20}}>
+            <Container  style={{textAlign: 'center', padding:"10px", marginTop:12, marginLeft:20}}>
                 <Row>
                     <Row>
                         {
