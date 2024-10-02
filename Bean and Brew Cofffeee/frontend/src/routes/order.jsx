@@ -1,18 +1,18 @@
-import React, {useEffect, useState} from "react";
-import 'bootstrap/dist/css/bootstrap.min.css'
+import React, {useState, useEffect} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
 import {
-    Container, 
+    Container,
     Row,
     Col,
     Card,
     Table
 } from 'react-bootstrap'
-import axios from "axios";
-import { useParams } from "react-router-dom";
-import PageNavbar from "../components/navbar"
+import { useParams } from 'react-router-dom';
+import PageNavbar from '../components/navbar';
+import axios from 'axios';
 
 export default function Order(){
-    
+
     const [order, setOrder] = useState({})
     const [loaded, setLoaded] = useState(false)
     let {orderid} = useParams();
@@ -30,7 +30,7 @@ export default function Order(){
 
     if(loaded)
     {
-        return(
+        return (
             <>
                 <PageNavbar/>
                 <Container fluid>
@@ -42,7 +42,7 @@ export default function Order(){
                                     <Card.Title>
                                         Your Order at {order.site}
                                     </Card.Title>
-                                    <Table striped> 
+                                    <Table striped>
                                         <thead>
                                             <tr>
                                                 <th>Image</th>
@@ -55,7 +55,7 @@ export default function Order(){
                                         <tbody>
                                             {
                                                 order.items.map(item=>(
-                                                    <tr>                                                            
+                                                    <tr>
                                                         <td><img src={item.image} style={{width:"100px"}}/></td>
                                                         <td>{item.name}</td>
                                                         <td>{item.quantity}</td>
@@ -64,12 +64,13 @@ export default function Order(){
                                                     </tr>
                                                 ))
                                             }
+                                            
                                         </tbody>
                                     </Table>
                                     <Card.Text>
                                         Order Total: £{order.total} <br/>
-                                        Ordered at: {new Date(order.timestamp).toLocaleString("UK")}
-                                    </Card.Text>
+                                        Ordered At: {new Date(order.timestamp).toLocaleString("UK")}
+                                    </Card.Text> 
                                 </Card.Body>
                             </Card>
                         </Col>
@@ -79,4 +80,5 @@ export default function Order(){
             </>
         );
     }
+    
 }
