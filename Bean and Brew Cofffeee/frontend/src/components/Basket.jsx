@@ -25,6 +25,18 @@ export default function Basket(){
         })
         .catch((err) => console.log(err))
     },[]);
+    
+    const removeButton = (event) => {
+        var userid = Cookies.get("user");
+        var item = event.currentTarget.id
+        console.log(userid+'|'+item)
+        axios
+        .delete("http://localhost:3000/basket/item?item="+item+"&user="+userid, {
+            item:item,user:userid
+        }).then((res) => {
+            console.log(res.data)
+        })
+    };
 
     const CreateOrder = (event) => {
         var userid = Cookies.get("user");
@@ -68,7 +80,7 @@ export default function Basket(){
                                             <td>{item.quantity}</td>
                                             <td>£{item.price}</td>
                                             <td>£{item.quantity * item.price}</td>
-                                            <td></td>
+                                            <td><Button onClick={removeButton} id={item.id} variant='danger' style={{backgroundColor:'red', borderColor: 'red'}}>Remove</Button></td>
                                         </tr>
                                     ))
                                 }

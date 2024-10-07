@@ -1,0 +1,108 @@
+[{
+  "_id": {
+    "$oid": "66f12a322bd8e276c15754f5"
+  },
+  "image": "https://www.italiancork.com/wp-content/uploads/2018/07/cappuccino.jpg",
+  "name": "Cappuccino",
+  "price": 5.25,
+  "type": "drink"
+},
+{
+  "_id": {
+    "$oid": "66f12b022bd8e276c15754f6"
+  },
+  "image": "https://www.hiperbaric.com/wp-content/uploads/2019/12/Main_image-1024x714.jpg",
+  "name": "Tea",
+  "price": 3.5,
+  "type": "food"
+},
+{
+  "_id": {
+    "$oid": "66f140432bd8e276c15754f8"
+  },
+  "image": "https://wallpapercave.com/wp/wp2053415.jpg",
+  "name": "Sandwich",
+  "price": 4.5,
+  "type": "food"
+},
+{
+  "_id": {
+    "$oid": "66f140df2bd8e276c15754fa"
+  },
+  "image": "https://catallia.com/wp-content/uploads/2018/01/flavored-sandwich-wrap-1170x781.jpg",
+  "name": "Wrap",
+  "price": 3.99,
+  "type": "food"
+},
+{
+  "_id": {
+    "$oid": "66f147462bd8e276c15754fe"
+  },
+  "image": "https://assets.rebelmouse.io/eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpbWFnZSI6Imh0dHBzOi8vYXNzZXRzLnJibC5tcy8xMDU4ODM4Ny9vcmlnaW4uanBnIiwiZXhwaXJlc19hdCI6MTY2NDQ2NjU0N30.o1efd-u8kOAeK8Z_oIOv55Z44-Z2_BH-l20SDHX1esg/img.jpg?width=980",
+  "name": "Flat White",
+  "price": 5.25,
+  "type": "drink"
+},
+{
+  "_id": {
+    "$oid": "66f147c42bd8e276c1575500"
+  },
+  "image": "https://keyassets-p2.timeincuk.net/wp/prod/wp-content/uploads/sites/53/2019/09/sausage-rolls-1842x1212.jpg",
+  "name": "Sausage roll",
+  "price": 2.5,
+  "type": "food"
+},
+{
+  "_id": {
+    "$oid": "66f148312bd8e276c1575501"
+  },
+  "image": "https://thumbs.dreamstime.com/b/sandwich-%C3%A0-baguette-avec-du-jambon-et-le-fromage-9248589.jpg",
+  "name": "Baguette ",
+  "price": 3.5,
+  "type": "food"
+},
+{
+  "_id": {
+    "$oid": "66f148bc2bd8e276c1575502"
+  },
+  "image": "https://images3.alphacoders.com/104/thumb-1920-1041781.jpg",
+  "name": "Pizza ",
+  "price": 5.5,
+  "type": "food"
+},
+{
+  "_id": {
+    "$oid": "66f149b82bd8e276c1575503"
+  },
+  "image": "https://www.cookingclassy.com/wp-content/uploads/2018/10/hot-chocolate-33.jpg",
+  "name": "Hot Chocolate",
+  "price": 4,
+  "type": "drink"
+},
+{
+  "_id": {
+    "$oid": "66f149ff2bd8e276c1575504"
+  },
+  "image": "https://www.aerolatte.com/wp-content/uploads/2020/02/three-layer-mochiato.jpg",
+  "name": "Latte",
+  "price": 5.25,
+  "type": "drink"
+},
+{
+  "_id": {
+    "$oid": "66f14a462bd8e276c1575505"
+  },
+  "image": "https://cdn.shopify.com/s/files/1/1221/3516/articles/latte-art-on-mocha_1200x1200.jpg?v=1660069726",
+  "name": "Mocha",
+  "price": 5.25,
+  "type": "drink"
+},
+{
+  "_id": {
+    "$oid": "66f14b3c2bd8e276c1575507"
+  },
+  "image": "https://media-cldnry.s-nbcnews.com/image/upload/t_fit-760w,f_auto,q_auto:best/newscms/2019_21/2870431/190524-classic-american-cheeseburger-ew-207p.jpg",
+  "name": "Burger",
+  "price": 5.5,
+  "type": "food"
+}]

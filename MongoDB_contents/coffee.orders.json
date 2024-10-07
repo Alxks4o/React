@@ -1,0 +1,96 @@
+[{
+  "_id": {
+    "$oid": "66fd22c8249b5eb1840221a7"
+  },
+  "user": "66f3eeb8cb825f2941a96359",
+  "site": "66ed37e9469981a169d74fd7",
+  "items": [
+    {
+      "item": "66f149b82bd8e276c1575503",
+      "quantity": 2
+    }
+  ],
+  "timestamp": {
+    "$numberLong": "1727865544218"
+  }
+},
+{
+  "_id": {
+    "$oid": "66fd2a2b17bf99983ef53d74"
+  },
+  "user": "66f3eeb8cb825f2941a96359",
+  "site": "66ed4b90469981a169d74fd8",
+  "items": [
+    {
+      "item": "66f12a322bd8e276c15754f5",
+      "quantity": 2
+    }
+  ],
+  "timestamp": {
+    "$numberLong": "1727867435816"
+  }
+},
+{
+  "_id": {
+    "$oid": "66fd329d17bf99983ef53d75"
+  },
+  "user": "66f3eeb8cb825f2941a96359",
+  "site": "66ed4be4469981a169d74fd9",
+  "items": [
+    {
+      "item": "66f12a322bd8e276c15754f5",
+      "quantity": 4
+    },
+    {
+      "item": "66f149ff2bd8e276c1575504",
+      "quantity": 2
+    }
+  ],
+  "timestamp": {
+    "$numberLong": "1727869597907"
+  }
+},
+{
+  "_id": {
+    "$oid": "66fd332017bf99983ef53d76"
+  },
+  "user": "66f3eeb8cb825f2941a96359",
+  "site": "66ed4be4469981a169d74fd9",
+  "items": [
+    {
+      "item": "66f12a322bd8e276c15754f5",
+      "quantity": 4
+    },
+    {
+      "item": "66f149ff2bd8e276c1575504",
+      "quantity": 2
+    }
+  ],
+  "timestamp": {
+    "$numberLong": "1727869728955"
+  }
+},
+{
+  "_id": {
+    "$oid": "6703a65b25afeb8bc6ea7659"
+  },
+  "user": "66f3eeb8cb825f2941a96359",
+  "site": "66ed4be4469981a169d74fd9",
+  "items": [
+    {
+      "item": "66f12a322bd8e276c15754f5",
+      "quantity": 4
+    },
+    {
+      "item": "66f149ff2bd8e276c1575504",
+      "quantity": 4
+    },
+    {
+      "item": "66f14a462bd8e276c1575505",
+      "quantity": 2
+    }
+  ],
+  "timestamp": {
+    "$numberLong": "1728292443319"
+  }
+}]

@@ -119,6 +119,46 @@ async function CheckExistingBasket(userid){
 function findItemById(list, id) {
     return list.find((obj) => obj._id === new mongo.ObjectId(id));
 }
-  
+
+
+
+router.delete('/item',async function(req, res, next) {
+    const client = new MongoClient(uri);
+    const database = client.db("coffee")
+    const collection = database.collection("basket");
+    var basket = await collection.findOne({user:req.query.user})
+     
+    var newItems = [];
+    for(const item of basket.items)
+    {
+        if(item.item == req.query.item)
+        {
+            if(item.quantity>1)
+            {
+                newItems.push({
+                    item:item.item,
+                    quantity:item.quantity-1
+                })
+            }
+        }else{
+            newItems.push({
+                item:item.item,
+                quantity:item.quantity
+            })
+        }
+    }
+ 
+    await collection.updateOne({
+        user:req.query.user
+    },
+    {
+        "$set":{
+            items:newItems
+        }
+    })
+ 
+    res.json({"Success":1})
+    })
+
 
 module.exports = router;
