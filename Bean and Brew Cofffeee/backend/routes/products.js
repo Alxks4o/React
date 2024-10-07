@@ -15,4 +15,14 @@ router.get('/drinks', async function(req, res, next) {
     client.close();
 });
 
+router.get('/food', async function(req, res, next) {
+    const client = new MongoClient(uri);
+    const database = client.db("coffee");
+    const collection = database.collection("products");
+    const sites = await collection.find({type:"food"}).toArray();
+    res.json(sites);
+    client.close();
+});
+
+
 module.exports = router;
