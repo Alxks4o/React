@@ -76,6 +76,7 @@ div input{
     outline: none;
     font-size: 14px;
     margin-top: 6px;
+    align-items: left;
 }
 
 h2{
