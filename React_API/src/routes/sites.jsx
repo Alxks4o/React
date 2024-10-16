@@ -9,16 +9,20 @@ import {
 }from 'react-bootstrap';
 import Cookies from 'js-cookie';
 import axios from 'axios';
+import { useNavigate } from 'react-router-dom';
 
 
 export default function Sites(){
     
+    const navigate = useNavigate();
     const [sites, setSites] = useState([]);
-
-
-    useEffect(() =>{
+    const selectSite = (site) =>{
+        Cookies.set('site',site)
+        navigate('/')
+    }
+        useEffect(() =>{
         axios
-        .get('http://api.roberthompson.co.uk/sites')
+        .get('http://192.168.168.122:3000/sites/')
         .then((res) => {
             setSites(res.data)
         })
@@ -34,11 +38,11 @@ export default function Sites(){
                         sites.map(site =>(
                             
                             <Col xs={'4'}>
-                                <Card fluid style={{ width: '18rem'}} >
+                                <Card fluid style={{width: '100%', marginTop: '18px'}} >
                                     <Card.Img variant="top" src={site.image}/>
                                     <Card.Body>
                                         <Card.Title>{site.name}</Card.Title>                                                       
-                                    <Button variant="primary">Go somewhere</Button>
+                                    <Button onClick={() => selectSite(site._id)} variant="primary">lick me!</Button>
                                 </Card.Body>
                                 </Card>
                             </Col>

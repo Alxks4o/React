@@ -7,12 +7,13 @@ import{
 import Login from './routes/login';
 import Register from './routes/register';
 import Sites from './routes/sites';
+import Index from './routes';
 
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <div>Hello world!</div>,
+    element: <Index/>,
   },
   {
     path: '/login',
