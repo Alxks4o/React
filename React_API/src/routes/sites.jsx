@@ -5,11 +5,13 @@ import {
     Container,
     Row,
     Card,
-    Button
+    Button,
+    Navbar
 }from 'react-bootstrap';
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import PageNavbar from '../components/navbar';
 
 
 export default function Sites(){
@@ -22,7 +24,7 @@ export default function Sites(){
     }
         useEffect(() =>{
         axios
-        .get('http://192.168.168.122:3000/sites/')
+        .get('http://127.0.0.1:3000/sites/')
         .then((res) => {
             setSites(res.data)
         })
@@ -31,14 +33,14 @@ export default function Sites(){
 
     return(
         <>
-        
+            <PageNavbar/>
             <Container>
                 <Row>
                     {
                         sites.map(site =>(
                             
                             <Col xs={'4'}>
-                                <Card fluid style={{width: '100%', marginTop: '18px'}} >
+                                <Card fluid style={{width: '100%',height: "100%" ,marginTop: '18px'}} >
                                     <Card.Img variant="top" src={site.image}/>
                                     <Card.Body>
                                         <Card.Title>{site.name}</Card.Title>                                                       

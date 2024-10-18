@@ -27,7 +27,7 @@ export default function Login(){
         var password = inputs.password
 
         axios 
-        .post('http://192.168.168.122:3000/users/login', {
+        .post('http://127.0.0.1:3000/users/login', {
             email:email, password:password
         }).then((res) =>{
             console.log(res)
@@ -37,6 +37,7 @@ export default function Login(){
                 navigate('/')
             }
         }).catch((error) =>{
+            console.log(error)
             setShow(true);
             setMessage(error.response.data.error);
         })
@@ -55,8 +56,8 @@ export default function Login(){
                 <Row >
                     <Col xs='2'></Col>
                     <Col xs='8'>
-                        <Alert variant='danger' dismissible>
-                            <Alert.Heading>Oh no!</Alert.Heading>
+                        <Alert show={show} onClose={() => setShow(false)} variant='danger' dismissible>
+                            <Alert.Heading >Oh no!</Alert.Heading>
                             <p>{message}</p>                              
                         </Alert>
                         <Card>
