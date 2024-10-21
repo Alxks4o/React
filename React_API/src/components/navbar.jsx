@@ -42,14 +42,14 @@ export default function PageNavbar(){
             <>
                 <Navbar bg="dark" data-bs-theme="dark">
                     <Container style={{marginLeft: 0}}>
-                    <Navbar.Brand href="#home">Navbar</Navbar.Brand>
-                    <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="/sites">Sites</Nav.Link>
-                    </Nav>
-                    <Nav className='justify-content-end'>
-                        <Nav.Link >Signed in as: <a style={{textDecoration:'underline'}}>{user.email}</a></Nav.Link>
-                    </Nav>
+                        <Navbar.Brand href="#home">Navbar</Navbar.Brand>
+                        <Nav className="me-auto">
+                            <Nav.Link href="#home">Home</Nav.Link>
+                            <Nav.Link href="/sites">Sites</Nav.Link>
+                        </Nav>
+                        <Nav >
+                            <Nav.Link >Signed in as: <a style={{textDecoration:'underline'}}>{user.email}</a></Nav.Link>
+                        </Nav>
                     </Container>
                 </Navbar>
             </>

@@ -8,6 +8,7 @@ import Login from './routes/login';
 import Register from './routes/register';
 import Sites from './routes/sites';
 import Index from './routes';
+import Ordering from './components/ordering';
 
 
 const router = createBrowserRouter([
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
   {
     path: '/sites',
     element: <Sites/>
+  },
+  {
+    path: '/products',
+    element: <Ordering/>
   }
 ]);
 
