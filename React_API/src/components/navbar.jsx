@@ -48,7 +48,7 @@ export default function PageNavbar(){
                             <Nav.Link href="/sites">Sites</Nav.Link>
                         </Nav>
                         <Nav >
-                            <Nav.Link >Signed in as: <a style={{textDecoration:'underline'}}>{user.email}</a></Nav.Link>
+                            <Nav.Link className='float-end' >Signed in as: <a style={{textDecoration:'underline'}}>{user.email}</a></Nav.Link>
                         </Nav>
                     </Container>
                 </Navbar>
