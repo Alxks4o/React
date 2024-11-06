@@ -6,11 +6,13 @@ import
     Container,
     Row,
     Card,
-    Button
+    Button,
+    Navbar
 } from 'react-bootstrap';
 import Cookies from 'js-cookie';
 import axios from 'axios';
 import { useNavigate } from 'react-router-dom';
+import PageNavbar from '../components/navbar';
 
 
 export default function Sites(){
@@ -36,7 +38,8 @@ export default function Sites(){
 
     return(
         <>
-            <Container style={{height:"100vh"}} className='d-flex align-items-center justify-content-center' fluid>
+            <PageNavbar/>
+            <Container style={{height:"100%", marginTop:"16px"}} className='d-flex align-items-center justify-content-center' fluid>
                 <Row>
                     {
                         sites.map(site =>(

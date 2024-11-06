@@ -42,15 +42,15 @@ export default function PageNavbar(){
                 <Container fluid>
                     <Navbar.Brand href="/">Navbar</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="/">Home</Nav.Link>
-                        <Nav.Link href="/sites">Change Site</Nav.Link>
+                        <Nav.Link href="/sites">Home</Nav.Link>
                         <Nav.Link href="/">Pricing</Nav.Link>
+                        <Nav.Link href="/orders/site">View Orders</Nav.Link>
                     </Nav>
                     <Nav className="justify-content-end">
                         <Navbar.Text>
                             Signed in as: {user.email}
                         </Navbar.Text>
-                        <Nav.Link href="/">Sign Out</Nav.Link>
+                        <Nav.Link href="/logout">Sign Out</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

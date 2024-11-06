@@ -54,10 +54,10 @@ export default function Login(){
                 <Row>
                     <Col xs='2'></Col>
                     <Col xs='8'>
-                        <Alert variant='danger' dismissible>
+                        <Alert variant="danger" show={show} onClose={() => setShow(false)} dismissible>
                             <Alert.Heading>Oh No!</Alert.Heading>
                             <p>
-                                message
+                                {message}
                             </p>
                         </Alert>
                         <Card>
