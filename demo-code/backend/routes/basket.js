@@ -76,8 +76,8 @@ router.get('/', async function(req,res,next){
             })
         }
     } catch (error) {
-        console.log(error)
         res.status(500).json({error:"Could not get basket"})
+        console.log(error)
     }
 });
 

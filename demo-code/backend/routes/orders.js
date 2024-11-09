@@ -83,7 +83,7 @@ async function GetOrder(order_id){
             total:total,
             timestamp:order.timestamp,
             id:order_id,
-            status:status.description
+            status:status
         });
 
     } catch (error) {
