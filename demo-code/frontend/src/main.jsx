@@ -13,6 +13,7 @@ import OrdersUser from './routes/ordersUser';
 import OrdersSites from './routes/ordersSites';
 import OrderStaff from './routes/orderStaff';
 import Logout from './routes/logout';
+import ChangePrice from './routes/changePrice';
 
 const router = createBrowserRouter([
   {
@@ -48,6 +49,10 @@ const router = createBrowserRouter([
   {
     path:'/logout',
     element:<Logout/>
+  },
+  {
+    path:'pricing/pricechange',
+    element: <ChangePrice/>
   }
 ]);
 

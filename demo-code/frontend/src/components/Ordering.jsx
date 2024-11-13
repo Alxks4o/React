@@ -94,6 +94,7 @@ export default function Ordering(){
                                     <th>Name</th>
                                     <th>Price</th>
                                     <th>Add to Basket</th>
+                                    <th>Change Price</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -104,6 +105,7 @@ export default function Ordering(){
                                             <td>{drink.name}</td>
                                             <td>£{drink.price}</td>
                                             <td><Button onClick={() => {AddToBasket(drink._id)}}>Add to Basket</Button></td>
+                                            <td><Button href="/pricing/pricechange">Change Price</Button></td>
                                         </tr>
                                     ))
                                 }
@@ -128,6 +130,7 @@ export default function Ordering(){
                                             <td>{food.name}</td>
                                             <td>£{food.price}</td>
                                             <td><Button onClick={() => {AddToBasket(food._id)}}>Add to Basket</Button></td>
+                                            <td><Button href="/pricing/pricechange">Change Price</Button></td>
                                         </tr>
                                     ))
                                 }
