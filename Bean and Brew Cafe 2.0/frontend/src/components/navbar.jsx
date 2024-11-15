@@ -10,6 +10,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import axios from 'axios';
 
 export default function PageNavbar(){
+
     const [user, setUser] = useState("")
     const navigate = useNavigate();
 
@@ -47,7 +48,7 @@ export default function PageNavbar(){
                         <Nav.Link href="/orders/site">View Orders</Nav.Link>
                     </Nav>
                     <Nav className="justify-content-end">
-                        <Navbar.Text>
+                        <Navbar.Text style={{marginRight:"16px"}}>
                             Signed in as: {user.email}
                         </Navbar.Text>
                         <Nav.Link href="/logout">Sign Out</Nav.Link>

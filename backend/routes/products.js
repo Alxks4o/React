@@ -40,34 +40,8 @@ router.get('/food',async function(req,res,next){
     }
 });
 
-
-router.put('/:products/price', async function(req,res,next){
-    try {
-        
-        var product_id = req.body._id
-        var newPrice = req.body.price
-
-        if(newPrice!==undefined){
-            const client = new MongoClient(databaseLink);
-            const database = client.db('coffee');
-            const collection =  database.collection('products');
-
-            await collection.updateOne({
-                _id: new mongo.ObjectId(product_id)
-            },{
-                "$set":{
-                    price:newPrice
-                }
-            });
-        }
-
-        res.json(product);
-
-    } catch (error) {
-        console.log(error);
-        res.status(500).json({error:"Could not change price"});
-    }
-})
+//add in another router.get
+//food - url is - localhost:3000/products/food - GET
 
 
 module.exports = router;
