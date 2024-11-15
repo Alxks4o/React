@@ -66,7 +66,7 @@ export default function Ordering(){
                                             <Form onSubmit={(event)=> handleChange(event, product._id)}>
                                                 <Row>
                                                     <Col>
-                                                    <Form.Control type="number"  step="0.01" placeholder="Enter price..." />
+                                                    <Form.Control type="number" step="0.01" placeholder="Enter price..." />
                                                     </Col>
                                                     <Col>
                                                     <Button variant="danger" type="submit" >Change Price</Button>
