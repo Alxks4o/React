@@ -61,7 +61,7 @@ export default function Ordering(){
                                     <tr key={product._id}>
                                         <td><img src={product.image} style={{width:"100px"}}/></td>
                                         <td>{product.name}</td>
-                                        <td>£{product.price}</td>                                            
+                                        <td>£{(product.price.toFixed(2))}</td>
                                         <td>
                                             <Form onSubmit={(event)=> handleChange(event, product._id)}>
                                                 <Row>
