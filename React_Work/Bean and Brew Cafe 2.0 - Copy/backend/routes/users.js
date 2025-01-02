@@ -98,6 +98,7 @@ router.get('/', function(req, res, next) {
   res.send('respond with a resource');
 });
 
+module.exports = router;
 
 // router.put('/:users/password', async function(req,res,next){
 //   try {
@@ -130,4 +131,3 @@ router.get('/', function(req, res, next) {
 //       res.status(500).json({error:"Could not change password"});
 //   }
 // })
-module.exports = router;

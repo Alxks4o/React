@@ -17,7 +17,6 @@ import PageNavbar from '../components/navbar';
 
 export default function Sites(){
 
-    const [isLoaded, setisLoaded] = useState(false)
     const [sites, setSites] = useState([])
     const navigate = useNavigate();
 
@@ -27,7 +26,6 @@ export default function Sites(){
         .get('http://127.0.0.1:3000/sites')
         .then((res) => {
             setSites(res.data)
-            setisLoaded(true)
         })
         .catch((error) => console.log(error))
     },[]) // <---- please add this
@@ -38,7 +36,6 @@ export default function Sites(){
         navigate('/')
     }
 
-    if(isLoaded)
     {
     return(
         <>

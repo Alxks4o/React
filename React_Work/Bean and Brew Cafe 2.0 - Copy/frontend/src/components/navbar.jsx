@@ -41,7 +41,7 @@ export default function PageNavbar(){
         <>
             <Navbar bg="dark" data-bs-theme="dark">
                 <Container fluid>
-                    <Navbar.Brand href="/">Navbar</Navbar.Brand>
+                    <Navbar.Brand href="/">Bean and Brew</Navbar.Brand>
                     <Nav className="me-auto">
                         <Nav.Link href="/sites">Home</Nav.Link>
                         <Nav.Link href="/">Pricing</Nav.Link>
