@@ -13,7 +13,6 @@ import {
 } from 'react-bootstrap';
 import Cookies from 'js-cookie';
 import { useNavigate } from 'react-router-dom';
-import PageNavbar from "../components/navbar";
 
 export default function Ordering(){
     const [isLoaded, setisLoaded] = useState(false);
@@ -45,8 +44,7 @@ export default function Ordering(){
     if(isLoaded)
     {
         return(
-            <>    
-                <PageNavbar/>    
+            <>          
                 <Container>
                     <Table striped>
                         <thead>
@@ -63,15 +61,15 @@ export default function Ordering(){
                                     <tr key={product._id}>
                                         <td><img src={product.image} style={{width:"100px"}}/></td>
                                         <td>{product.name}</td>
-                                        <td>£{(product.price.toFixed(2))}</td>
+                                        <td>£{(product.price)}</td>
                                         <td>
                                             <Form onSubmit={(event)=> handleChange(event, product._id)}>
                                                 <Row>
                                                     <Col>
-                                                        <Form.Control type="number" step="0.01" placeholder="Enter price..." />
+                                                    <Form.Control type="number" step="0.01" placeholder="Enter price..." />
                                                     </Col>
                                                     <Col>
-                                                        <Button variant="danger" type="submit" >Change Price</Button>
+                                                    <Button variant="danger" type="submit" >Change Price</Button>
                                                     </Col>
                                                 </Row>
                                             </Form>                                               
