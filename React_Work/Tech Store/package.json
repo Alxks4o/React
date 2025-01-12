@@ -1,0 +1,26 @@
+{
+  "name": "tech-store",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon backend/server.js"
+  },
+  "type": "module",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@chakra-ui/react": "^3.3.0",
+    "@emotion/react": "^11.14.0",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "framer-motion": "^11.17.0",
+    "mongoose": "^8.9.4",
+    "nodemon": "^3.1.9"
+  },
+  "devDependencies": {
+    "vite-tsconfig-paths": "^5.1.4"
+  }
+}
